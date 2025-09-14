@@ -15,8 +15,8 @@ st.set_page_config(
 @st.cache_data
 def load_assets():
     # Using relative paths for portability. Place your files in the same folder as the app.
-    model_path = 'models\lightgbm_churn_model.pkl'
-    data_path = 'data\Train.csv'
+    model_path = 'lightgbm_churn_model.pkl'
+    data_path = 'Train.csv'
     
     try:
         model = joblib.load(model_path)
@@ -326,4 +326,5 @@ elif page == "About":
     -   **Predict Churn:** Use the interactive form to predict churn for a single customer or upload a CSV file for batch predictions.
     -   **Model Performance:** Review the detailed performance metrics and feature importance chart to understand the model's accuracy and logic.
     """)
+
 
